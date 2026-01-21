@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+header .update-time {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+section {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #4a5568;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3 {
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+}
+
+.overview-content p {
+    margin-bottom: 15px;
+    color: #4a5568;
+}
+
+.key-figures, .charges {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.key-figures ul, .charges ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.key-figures li, .charges li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.key-figures li:last-child, .charges li:last-child {
+    border-bottom: none;
+}
+
+.highlight {
+    font-size: 1.3rem;
+    color: #c53030;
+    margin: 15px 0;
+}
+
+/* Timeline Styles */
+.timeline-container {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    border-radius: 3px;
+}
+
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+    margin: 30px 0 20px -30px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.timeline-year::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 3px solid #667eea;
+    border-radius: 50%;
+}
+
+.timeline-item.important::before {
+    background: #667eea;
+    border-color: #764ba2;
+    width: 14px;
+    height: 14px;
+    left: -27px;
+}
+
+.timeline-item.upcoming::before {
+    background: #f6ad55;
+    border-color: #ed8936;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(246, 173, 85, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(246, 173, 85, 0); }
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background: #f7fafc;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.timeline-item.important .timeline-content {
+    background: #ebf4ff;
+    border-left-color: #764ba2;
+}
+
+.timeline-item.upcoming .timeline-content {
+    background: #fffaf0;
+    border-left-color: #ed8936;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.timeline-content p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Background Section */
+.background-content {
+    color: #4a5568;
+}
+
+.background-content ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.background-content li {
+    padding: 5px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-container {
+        padding-left: 25px;
+    }
+
+    .timeline-year {
+        font-size: 1.2rem;
+        margin-left: -25px;
+        padding-left: 25px;
+    }
+}
